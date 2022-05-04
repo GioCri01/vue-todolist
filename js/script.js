@@ -51,6 +51,8 @@ const app = new Vue ({
              
             
             this.todos.push(newTodo);
+
+            this.toDoValue= "";
             
         }
 

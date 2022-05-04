@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="app" class="container">
-        <input  v-model.trim="toDoValue"type="text" placeholder="inserisci">
+        <input @keyup.enter="addTodo()" v-model.trim="toDoValue"type="text" placeholder="inserisci">
         <button @click="addTodo()">inserisci</button>
         <div class="todo-container">
             <ul >
