@@ -44,12 +44,16 @@ const app = new Vue ({
             
         },
         addTodo(){
+            
             newTodo = {
                 text: this.toDoValue,
                 done: false,
             };
-            this.todos.push(newTodo);
-            this.toDoValue= "";
+            if(this.toDoValue.length > 1){
+                this.todos.push(newTodo);
+                this.toDoValue= "";
+            }
+            
            
 
             
