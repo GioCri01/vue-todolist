@@ -48,13 +48,13 @@ const app = new Vue ({
                 text: this.toDoValue,
                 done: false,
             };
-             
-            
             this.todos.push(newTodo);
-
             this.toDoValue= "";
-            
-        }
+           
 
+            
+            
+        },
+        
     },
 });

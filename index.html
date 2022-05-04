@@ -15,8 +15,8 @@
         <button @click="addTodo()">inserisci</button>
         <div class="todo-container">
             <ul >
-                <li @click=" todo.done = true" :class="todo.done === true ? 'done':''" v-for ="(todo,indice) in todos">
-                    {{todo.text}}
+                <li  v-for ="(todo,indice) in todos">
+                    <p @click="todo.done = !todo.done"  :class="todo.done === true ? 'done':''">{{todo.text}}</p>
                     <i @click=" removeTodo(indice)" class="fa-solid fa-trash-can"> </i>
 
                 </li>
