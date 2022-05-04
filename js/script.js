@@ -32,4 +32,12 @@ const app = new Vue ({
         ]
         
     },
+
+    methods:{
+        removeTodo(indice){
+            this.todos.splice(indice,1);
+            confirm("sicuro di voler eliminare?")
+        }
+
+    },
 });

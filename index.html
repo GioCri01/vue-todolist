@@ -17,7 +17,7 @@
             <ul >
                 <li :class="todo.done === true ? 'done':''" v-for ="(todo,indice) in todos">
                     {{todo.text}}
-                    <i class="fa-solid fa-trash-can"> </i>
+                    <i @click=" removeTodo(indice)" class="fa-solid fa-trash-can"> </i>
 
                 </li>
                 
