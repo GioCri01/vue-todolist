@@ -29,14 +29,29 @@ const app = new Vue ({
                 text: "rinnovare RCA",
                 done: false,
             },
-        ]
+        ],
+
+        toDoValue: "",
+
+        
         
     },
 
     methods:{
         removeTodo(indice){
-            this.todos.splice(indice,1);
             confirm("sicuro di voler eliminare?")
+            this.todos.splice(indice,1);
+            
+        },
+        addTodo(){
+            newTodo = {
+                text: this.toDoValue,
+                done: false,
+            };
+             
+            
+            this.todos.push(newTodo);
+            
         }
 
     },
